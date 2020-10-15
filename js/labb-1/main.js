@@ -40,7 +40,7 @@ Annan ålder än ovan = “black”
 
 console.log('Uppgift 3');
 
-function whatColor(age){
+const whatColor = age => {
 	if (age < 99 && age < 0) { 
 		return 'black' 
 	} else if (age <= 12) {
