@@ -15,6 +15,7 @@ Funktion 4:
 const tip = function(sum, percent) { let total = sum + sum * percent; return total;
 }
 */
+
 console.log('Funktion 1');
 const hello = () => console.log('Hello world');
 hello();

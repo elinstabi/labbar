@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta id="viewPort" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+            <title>Elin Ståbi CV</title>
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+            <style>
+                /*Styling cv*/
+                html {
+                    background:#eee;
+                    font-family:'Open Sans', sans-serif;
+                    font-weight:300;
+                    font-size:16px;
+                }
+                .main {
+                    box-shadow:0 5px 30px 0 rgba(88,76,88,.4);
+                    margin:0 auto;
+                }
+                .aside {
+                    padding:0.1rem 1.2rem 0;
+                    font-size:0.9rem;
+                    box-sizing: border-box;
+                }
+                .section {
+                    padding:0.1rem 1.2rem 0;
+                    box-sizing:border-box;
+                }
+                .section-top {
+                    padding-top:1rem;
+                    position:relative;
+                    background:#6a7d71;
+                    width:100%;
+                    height:9rem;
+                    color:#fff;
+                }
+                .section-middle {
+                    background:#fff;
+                    width:100%;
+                }
+                .article {
+                    margin-bottom:2rem;
+                }
+                .footer {
+                    background:#6a7d71;
+                    padding:1rem 3rem;
+                    box-sizing:border-box;
+                    text-align:center;
+                    color:#fff;
+                }
+                h1 {
+                    font-family:'Noto Sans JP', sans-serif;
+                    font-weight:700;
+                    font-size:2.3rem;
+                    line-height:2.2rem;
+                    margin:0;
+                }
+                h1 .h1-occupation {
+                    display:block;
+                    font-size:64%; 
+                }
+                .h1-backgroundimage {
+                    font-size:0;
+                    position:absolute;
+                    right:0.55rem;
+                    top:0.55rem;
+                    height:5.5rem;
+                    width:5.5rem;
+                    background:url("http://elinstabi.se/img/moi-img-one.jpg");
+                    background-size:cover;
+                    border-radius:50%;
+                }
+                h2 {
+                    font-size:1rem;
+                    font-weight:600;
+                    margin-bottom:0.2rem;
+                }
+                .h2-aside {
+                    font-size:0.9rem; 
+                }
+                h3 {
+                    margin:0.5em 0 0.3rem;
+                    font-size:0.9rem;
+                    font-weight:600;
+                }
+                p { 
+                    margin:0 0 1.2rem;
+                    font-weight:300;
+                }
+                a {
+                    text-decoration:none;
+                    color:#fff;
+                } 
+                a:hover {
+                    color:#ddd;
+                } 
+                ul {
+                    list-style: none;
+                    padding:0;
+                }
+                .ul-custom-dot li {
+                    padding:0 0 0.6rem 1.3rem; 
+                }
+                .ul-custom-dot li:before {
+                    position:absolute;
+                    content:"";
+                    width:.5rem;
+                    height:.5rem;
+                    background-color:#ccc;
+                    border-radius:50%;
+                    left:0;
+                    top:0.5rem;
+                }
+                .aside ul {
+                    margin-top:0.5rem;
+                }
+                li {
+                    position:relative;
+                }
+                .column-count {
+                    column-count:4;
+                }
+                .semibold {
+                    font-weight:600;
+                }
+                .normalweight {
+                    font-weight:400;
+                }
+                .border-left {
+                    border-left:0.15em solid #ddd;
+                    padding-left:1.3rem;
+                }
+
+                @media only screen and (min-width:720px) {
+                    .main { 
+                        width:90%; 
+                        max-width:1240px;
+                        max-height:1754px;
+                        margin:3rem auto;
+                    }
+                    aside { 
+                        float:right;
+                        width:30%;
+                        text-align:right;
+                        padding:2rem 1.2rem 0;
+                    }
+                    .section {
+                        padding:2rem 3rem;
+                    }
+                    .section-top {
+                        height:13rem;
+                    }
+                    .section-middle {
+                        width:70%;
+                        padding-right:10%;
+                    }
+                    h1 {
+                        font-size:3rem;
+                        line-height:2.9rem;
+                    }
+                    .h1-backgroundimage {
+                        right:2rem;
+                        top:2rem;
+                        height:9rem;
+                        width:9rem;
+                    }
+                    h2 {
+                        font-size:1.15rem;
+                    }
+                    h3 {
+                        font-size:1.05rem;
+                    }
+                    li {
+                        padding:0 0 0.6rem 1.3rem;
+                    }
+                    .column-count {
+                        column-count:1;
+                    }
+                    .column-count.column-count-lg {
+                        column-count:2;
+                        text-align:left;
+                    }
+                }
+                @media only screen and (min-width:1020px) {
+                    .main { 
+                        width:80%; 
+                        margin:5rem auto;
+                    }
+                    .section-middle {
+                        padding-right:20%;
+                    }
+                    .column-count.column-count-lg {
+                        column-count:3;
+                        text-align:left;
+                    }
+                }
+
+                /*Styling guessnr*/
+                .main-guessnr {
+                    background:#6a7d71;
+                    padding:2rem 3rem 1.3rem;
+                    box-sizing:border-box;
+                    color:#fff;
+                    font-weight:600;
+                    margin-top:3rem;
+                }
+                .main-guessnr p {
+                    font-weight:600;
+                }
+                .main-guessnr input {
+                    font-size:1.2rem;
+                    line-height:1.2rem;
+                    height:1.65rem;
+                }
+                .main-guessnr button {
+                    font-size:1.2rem;
+                    line-height:1.3rem;
+                    height:2rem;
+                    color:#6a7d71;
+                }
+                .guessnroutput {
+                    margin-top:1rem;
+                }
+            </style>
+        </head>
+        <body>
+            <main class="main">
+                <section class="section section-top">
+                    <h1>Elin <br>Ståbi <span class="h1-occupation">Frontend-utvecklare</span></h1>
+                    <div class="h1-backgroundimage">Bild på Elin Ståbi</div>
+                </section>
+                <aside class="aside">
+                    <article>
+                        <h2 class="h2-aside">Teknologi</h2>
+                        <ul class="column-count-lg column-count">
+                            <li>HTML</li>
+                            <li>CSS</li>    
+                            <li>JavaScript</li>
+                            <li>jQuery</li>
+                            <li>Sass</li>  
+                            <li>Bootstrap</li>   
+                            <li>git</li>   
+                            <li>gulp</li> 
+                        </ul>
+                    </article>
+                    <article>  
+                        <h2 class="h2-aside">Strategi / analys</h2>
+                        <ul class="column-count">
+                            <li>Google Analytics</li>
+                            <li>Google Ad Manager</li>
+                            <li>Google Ads</li>
+                            <li>Hotjar</li>
+                            <li>AB-tester</li>
+                        </ul>
+                    </article>
+                    <article> 
+                    <h2 class="h2-aside">Design</h2>
+                        <ul class="column-count">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>Sketch</li>
+                        </ul>
+                    </article>
+                    <article> 
+                        <h2 class="h2-aside">Projekthantering</h2>
+                        <ul class="column-count">
+                            <li>Trello</li>
+                            <li>Slack</li>
+                        </ul>
+                    </article>
+                </aside>
+                <section class="section section-middle">
+                    <article class="article">
+                        <h2>Kortfattat</h2>
+                        <p class="border-left">Frontend-utvecklare med driv och passion för kod, UI, UX 
+                        och digital strategi.</p>
+                    </article>
+                    <article class="article">
+                        <h2>Arbetslivserfarenhet</h2>
+                        <div class="border-left">
+                            <h3>Frontend-utvecklare, Airtours, 2014/06 - 2020/08</h3>
+                            <p>
+                                Jag har i tätt samarbete med backend moderniserat stora delar av Airtours hemsida, 
+                                implementerat nya frontendtekniker, byggt upp lokala miljöer samt satt riktlinjer och arbetssätt för frontend. 
+                                Tidvis har jag även haft ansvar för UI, UX, Google Ad Managager samt Google Analytics.
+                            </p>
+                        </div>
+                        <div class="border-left">
+                            <h3>Marknadsansvarig, Canapé Catering, 2009/05 - 2014/05</h3>
+                            <p>
+                                Ansvarig för konceptutveckling, hemsida, digital analys och strategi samt kundkontakter och redovisning.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="article">
+                        <h2>Utbildning</h2>
+                        <ul class="ul-custom-dot normalweight">
+                            <li>Hyper Island – Digital Data Strategist, 2013-2014</li>
+                            <li>Skola, Introduktion i Grafisk Design och Reklam, 2010</li>
+                            <li>Stockholm Universitet, Filosofie kandidatexamen, <br>Huvudområde: Socialantropologi 2010</li>
+                        </ul>
+                    </article>
+                    <article class="article">
+                        <h2>Övriga meriter</h2>
+                        <ul class="ul-custom-dot">
+                            <li>Deltagare i workshop för att utforma Hyper Islands nya program Front End Developer, The Hows, 2019</li>
+                            <li>Bedömningspanel för studenter, Hyper Island, 2016</li>
+                        </ul>
+                    </article>
+                    <p><span class="semibold">Referenser:</span> Lämnas gärna på förfrågan</p>
+                    
+            </section>
+            <footer class="footer">
+                <span class="semibold">Elin Ståbi | 070-231 73 20 | elin.stabi@hyperisland.se
+                    <br>
+                    <a href="https://se.linkedin.com/in/elinstabi" target="_blank">https://se.linkedin.com/in/elinstabi</a>
+                </span>
+            </footer>
+        </main>
+
+        
+        <div class="main main-guessnr">
+            <p>Gissa på ett tal mellan 1 och 100. Har man tråkigt kan det vara ganska kul!</p>
+            <div class="form"> 
+                <label for="guessField">Gissa här: </label> 
+                <input type="number" id="guessField"> 
+                <button type="submit" value="" id="submitGuesses">Gissa &#9996</button>
+            </div> 
+            <p id="guessNrOutput" class="guessnroutput"></p>
+        </div>
+
+    </body>
+    <script src="main.js"></script>
+</html>
