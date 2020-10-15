@@ -19,7 +19,7 @@ Skriv ut i konsolen:
 “ <Nummer1> plus <Nummer2> är: <summan> “.
 */
 
-console.log(`${nr1} plus ${nr2} är ${(nr1 + nr2)}`);
+console.log(`${nr1} plus ${nr2} är ${nr1 + nr2}`);
 
 /*
 Skapa ett objekt med javascript som innehåller följande variabler / datatyper:

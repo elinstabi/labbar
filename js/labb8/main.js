@@ -30,17 +30,21 @@ console.log(namesArray);
 console.log('Uppgift 5');
 console.log(namesArray.indexOf('Joakim'));
 
-console.log('Uppgift 6 for loop');
+console.log('Uppgift 6');
+namesArray.splice(2, 1);
+console.log(namesArray);
+
+console.log('Uppgift 7 for loop');
 for(let i = 0; i < namesArray.length; i++) {
 	console.log(namesArray[i] + ' for loop');
 }
 
-console.log('Uppgift 6 for of');
+console.log('Uppgift 7 for of');
 for( name of namesArray ) {
     console.log(name + ' forOf');
 }
 
-console.log('Uppgift 6 forEach');
+console.log('Uppgift 7 forEach');
 namesArray.forEach(name => {
 	console.log(name + ' forEach');
 });

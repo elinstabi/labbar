@@ -25,14 +25,9 @@ const greet = name => console.log(`Hej ${name} hur mår du?`);
 greet('besökare av denna labb,');
 
 console.log('Funktion 3');
-const calc = (numberOne, numberTwo) => {
-	return numberOne + numberTwo
-}
+const calc = (numberOne, numberTwo) => numberOne + numberTwo
 console.log(calc(7, 8));
 
 console.log('Funktion 4');
-const tip = (sum, percent) => { 
-	let total = sum + sum * percent; 
-	return total
-};
+const tip = (sum, percent) => sum + sum * percent; 
 console.log(tip(5, 10));
