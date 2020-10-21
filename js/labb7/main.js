@@ -1,4 +1,4 @@
-//labb 7 got 
+//labb 7 
 
 /*Skapa två stycken variabler av typen Number. 
 Skriv sedan ut i consolen resultaten av följande:
