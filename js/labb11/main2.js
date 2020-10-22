@@ -12,27 +12,17 @@ const getDateDivs = document.querySelectorAll('[data-getdate]');
 const setDate = () => {
 	const getDate = new Date();	
 	for(dateDiv of getDateDivs) {
-		const getDatasetGetdate = dateDiv.dataset.getdate;
-		const convertDatasetToMethod = getDate[`${getDatasetGetdate}`]();
-		if (getDatasetGetdate === 'getMonth'){
-			dateDiv.innerHTML = convertDatasetToMethod + 1;
-		} else {
+		
+		const getDatasetGetdate = dateDiv.dataset.getdate,
+			  convertDatasetToMethod = getDate[`${getDatasetGetdate}`]();
+
+		if(dateDiv.innerHTML !== convertDatasetToMethod.toString()) {
 			dateDiv.innerHTML = convertDatasetToMethod;
-		}
+		} 
 	}
 }
 setDate();
-
+got
 setInterval( () => {
 	setDate();
 }, 1000);
-
-
-//if wanting text instead of numbers
-const getDateAsText = new Date();
-
-const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-console.log(months[getDateAsText.getMonth()]);
-
-const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-console.log(days[getDateAsText.getDay()]);
