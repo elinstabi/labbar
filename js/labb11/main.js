@@ -1,4 +1,4 @@
-/* Labb 10
+/* Labb 11
 Du ska i denna laborationsuppgift göra följande:
 I den här uppgiften ska du skapa en hemsida som visar dagens datum och den aktuella tiden.
 Du ska skapa ett grafiskt gränssnitt med html och css men hur det ska se ut väljer du själv. 
@@ -8,19 +8,20 @@ Tänk på att klockan ska uppdateras 1 gång i sekunden så att det alltid v
 */
 
 const getDateDivs = document.querySelectorAll('[data-getdate]');
-
+const handleTimeUnit = (timeUnit) => timeUnit < 10 ? '0' + timeUnit : timeUnit;
+ 
 const setDate = () => {
-	const getDate = new Date();	
-	for(dateDiv of getDateDivs) {
-		const getDatasetGetdate = dateDiv.dataset.getdate;
-		const convertDatasetToMethod = getDate[`${getDatasetGetdate}`]();
-		if (getDatasetGetdate === 'getMonth'){
-			dateDiv.innerHTML = convertDatasetToMethod + 1;
-		} else {
-			dateDiv.innerHTML = convertDatasetToMethod;
-		}
-	}
+    const getDate = new Date(); 
+    for(dateDiv of getDateDivs) {
+        const getDatasetGetdate = dateDiv.dataset.getdate;
+        let convertDatasetToMethod = getDate[`${getDatasetGetdate}`]();
+        if (getDatasetGetdate === 'getMonth'){
+            convertDatasetToMethod++;
+        }
+        dateDiv.innerHTML = handleTimeUnit(convertDatasetToMethod);
+    }
 }
+
 setDate();
 
 setInterval( () => {
@@ -36,3 +37,7 @@ console.log(months[getDateAsText.getMonth()]);
 
 const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 console.log(days[getDateAsText.getDay()]);
+
+
+
+
