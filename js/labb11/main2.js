@@ -22,7 +22,7 @@ const setDate = () => {
 	}
 }
 setDate();
-got
+
 setInterval( () => {
 	setDate();
 }, 1000);
