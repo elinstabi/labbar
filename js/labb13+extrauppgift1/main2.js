@@ -1,5 +1,5 @@
 //labb13 och extrauppgift 1 // labb/upppgiftförklaring längst ner
-
+console.log(new Date().toLocaleDateString());
 // validating the inputs when leaving them
 const inputs = document.querySelectorAll('input');
 inputs.forEach(input => {
@@ -83,35 +83,22 @@ if (savedLocalStorageHtml) {
 // if for some reason wanting to clear local storage
 // localStorage.clear();
 
-
 // saving localstorage on radiobtn change
 const radioBtnSaveLocalStorageOnChange = () => {
 	const checkedRadioBtn = document.querySelectorAll('[type="radio"]');
 	if (checkedRadioBtn) {
 		checkedRadioBtn.forEach(radioBtn => {
 			radioBtn.addEventListener('change', e => {
-				const removeChecked = e.target.closest('.input-group').querySelectorAll('[type="radio"]');
-				removeChecked.forEach(checked => {
-					checked.classList.remove('checked');
-				})
-				e.target.classList.add('checked');
+				const removeChecked = e.currentTarget.parentNode.parentNode.parentNode.querySelector('div');
+				// ta bort klass eller data-attr 
+				
+				e.currentTarget.classList.add('checked');
 				saveToLocalStorage();
 			})
 		})
 	}
 }
 radioBtnSaveLocalStorageOnChange();
-
-// checked if class 'checked' exist on radiobutton and if thats the case adds checked to true
-const checkedRadioBtn = document.querySelectorAll('[type="radio"]');
-if (checkedRadioBtn) {
-	checkedRadioBtn.forEach(radioBtn => {
-		if (radioBtn.classList.value === 'checked') {
-			radioBtn.checked = true;
-		}
-	})
-}
-
 
 // removing student on removebtn click
 const removeStudentOnBtnClick = () => {
@@ -128,8 +115,8 @@ const removeStudentOnBtnClick = () => {
 removeStudentOnBtnClick();
 
 
-
-// spara localstorage per dag blir i version 2.0 
+// även spara input localstorage
+// spara per dag
 
 /* 
 Labb 13
