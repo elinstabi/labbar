@@ -32,7 +32,6 @@ const addStudent = () => {
 	tableElem.append(trElem);
 
 	const tdElem = document.createElement('td');
-	const studentTel = document.querySelector('#studentTel');
 	tdElem.innerHTML = `<div class="input-group d-flex flex-column text-nowrap"><div><input id="present${Date.now()}" role="button" type="radio" name="attendance${Date.now()}"><label class="ml-2" role="button" for="present${Date.now()}">Närvarande</label></div><div><input id="shortAbsence${Date.now()}" role="button" type="radio" name="attendance${Date.now()}"><label class="ml-2" role="button" for="shortAbsence${Date.now()}">Kortare frånvaro</label></div><div><input id="absence${Date.now()}" role="button" type="radio" name="attendance${Date.now()}"><label class="ml-2" role="button" for="absence${Date.now()}">Frånvaro</label></div><div><input id="ill${Date.now()}" role="button" type="radio" name="attendance${Date.now()}"><label class="ml-2" role="button" for="ill${Date.now()}">Sjuk</label></div></div>`;
 	trElem.append(tdElem);
 
@@ -47,7 +46,7 @@ const addStudent = () => {
 	radioBtnSaveLocalStorageOnChange();
 
 	const tdElemButton = document.createElement('td');
-	tdElemButton.innerHTML = `<button class="btn btn-secondary btn-sm text-nowrap py-0" data-removestudent="true" type="button">Ta bort</button>`;
+	tdElemButton.innerHTML = `<td><button class="btn btn-secondary btn-sm text-nowrap py-0" data-removestudent="true" type="button">Ta bort</button><`;
 	trElem.append(tdElemButton);
 
 	// removing student on removebtn click

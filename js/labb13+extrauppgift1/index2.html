@@ -1,0 +1,106 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Extrauppgift 1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	</head>
+	<body class="bg-light">
+
+		<main class="container mt-5 mb-5">
+            <h1 class="mb-5">Klasslistor / Närvaro</h1>
+            <h2 class="h3 mb-3">Lägg till student</h2>
+			<form novalidate class="needs-validation">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="mb-2" for="studentName">Studentens namn</label>
+                        <input id="studentName" class="form-control" data-studentinput="name" type="text" minlength="2" placeholder="Studentens namn" value="" name="studentname" required>
+                        <div class="invalid-feedback">
+                            Lägg till student minst två bokstäver
+                        </div>
+                        <div class="valid-feedback">
+                            Toppen, du vad studenten heter
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="mb-2" for="studentEmail">Studentens e-mail</label>
+                        <input id="studentEmail" class="form-control" data-studentinput="email" type="email" placeholder="Studentens email" value="" name="studentemail" required>
+                        <div class="invalid-feedback">
+                            Lägg till emailadress, måste innehålla @
+                        </div>
+                        <div class="valid-feedback">
+                            Toppen, du kan kontakta studenten via email
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="mb-2" for="studentTel">Studentens telefon</label>
+                        <input id="studentTel" class="form-control" data-studentinput="tel" type="number" placeholder="Studentens telefon" value="" name="studenttel" required>
+                        <div class="invalid-feedback">
+                            Lägg till telefonnummer, endast siffror tillåtna
+                        </div>
+                        <div class="valid-feedback">
+                            Toppen, du kan ringa studenten vid behov
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="mb-2" for="studentEdu">Studentens utbildning</label>
+                        <select id="studentEdu" class="custom-select" data-studentselect="edu" value="" name="studentedu" required>
+                            <option value="" selected>Välj utbildning...</option>
+                            <option value="frontend">Frontend JS</option>
+                            <option value="backend">Backend .NET</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Välj studentens utbildning
+                        </div>
+                        <div class="valid-feedback">
+                            Toppen, du vet vilken utbilning studenten går
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <div id="success" class="d-none alert alert-success col mr-3 mb-0 p-0">
+                            <span class="d-flex align-items-center pl-2">Student tillagd</span>
+                        </div>
+                    <button type="submit" class="btn btn-info" data-addstudent="true">Lägg till student</button>
+                    </div>
+                </div>
+            </form>
+
+            <h2 class="h3 mb-3">Klasslistor</h2>
+            <section id="studentlist" data-savetolocalstorage="true">
+                <h3 class="h5 mb-2">Frontend JS</h3>
+                <table class="table table-dark table-striped table-responsive-md mb-4">
+                    <thead>
+                        <tr>
+                            <th>Närvaro</th>
+                            <th>Namn</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Ta bort</th>
+                        </tr>
+                    </thead>
+                    <tbody data-studentlist="frontend"></tbody>
+                </table>
+                
+                <h3 class="h5 mb-2 mt-3">Backend .NET</h3>
+                <table class="table table-dark table-striped table-responsive-md">
+                    <thead>
+                        <tr>
+                            <th>Närvaro</th>
+                            <th>Namn</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Ta bort</th>
+                        </tr>
+                    </thead>
+                    <tbody data-studentlist="backend"></tbody>
+                </table>
+            </section>
+		</main>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script src="main2.js"></script>
+
+	</body>
+</html>
