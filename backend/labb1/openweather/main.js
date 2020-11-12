@@ -5,7 +5,6 @@ form.addEventListener('submit', e => {
 	e.stopPropagation();
 })
 
-
 const updateWeather = () => {
   const city = document.querySelector('input').value;
   const key = 'de1f30a058144676a7f0900af40ebf1b';
