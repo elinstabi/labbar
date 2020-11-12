@@ -18,8 +18,9 @@ form.addEventListener('submit', e => {
 		form.classList.add('was-validated');
 	} else {
 		//addStudent();
-		resetForm(form);
 		addStud();
+		//resetForm(form);
+		
 	}
 	e.preventDefault();
 	e.stopPropagation();
@@ -107,11 +108,12 @@ const addStud = () => {
 			'Content-type': 'application/json; charset=UTF-8'
 		},
 		body: JSON.stringify({
-			title: title
+			title: `${title}`
 		})
 	})
 	.then(res => console.log(res.json()))
 	//.then(() => console.log(getStudents()))
+	.catch(err => res.status(500).json(err))
 
 }
 /*

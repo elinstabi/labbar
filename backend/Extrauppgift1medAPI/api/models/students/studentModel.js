@@ -17,13 +17,12 @@ exports.getOneStudent = (req, res) => {
 exports.saveStudent = (req, res) => {
 	const student = new Student ({
 		_id: new mongodb.Types.ObjectId,
-		title: req.body.title
-		/*name: req.body.name,
+		//title: req.body.title
+		name: req.body.name,
 		email: req.body.email,
 		tel: req.body.tel,
-		course: req.body.course*/
+		course: req.body.course
 	})
-	console.log(student.save());
 	student.save()
 	
 	.then(() => {
