@@ -1,0 +1,86 @@
+.techstack-menu {
+    display:flex;
+    z-index:3;
+    position:relative;
+    right:0%;
+    transition:0.5s;
+    font-size: 1.6rem;
+    cursor:pointer;
+    top:0.4rem;
+    
+}
+.techstack-menu.toggle {
+    right:-100%;
+    transition:0.5s;
+}
+.techstack-menu-sidebar {
+    position:absolute;
+    right:-100%;
+    transition:0.5s;
+    top: 7%;
+    font-weight: 400;
+}
+.techstack-menu-sidebar.toggle {
+    right:20%;
+    transition:0.6s;
+}
+.techstack-menu i {
+    line-height: 0.3;
+    top:0.8rem;
+}
+.techstack-sidebar {
+    position:fixed;
+    z-index:2;
+    background:#708975;
+    right:-94%;
+    width:94%;
+    height:100vh;
+    top:0;
+    font-size:4rem;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.techstack-sidebar.toggle {
+    transition: 0.5s;
+    right:0%;
+}
+
+
+
+
+.techstack-sidebar .devicon{
+    position:relative;
+    opacity: 0;
+    transition: 0.7s;
+}
+.techstack-sidebar-show .devicon{
+    position:relative;
+    opacity: 1;
+    transition: 0.7s;
+    transition-delay: 0.5s;
+}
+
+
+.techstack-sidebar-card {
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:1.5rem;
+}
+.three-icons {
+    width:72%;
+}
+.adobe {
+    font-size:85%;
+}
+.google {
+    font-size:80%;
+}
+.icon-javascript, .icon-typescript{
+    position: relative;
+    top:0.2rem;
+    font-size:3.8rem;
+}
+.icon-javascript {
+    position: relative;
+    top:0.2rem;
+}
