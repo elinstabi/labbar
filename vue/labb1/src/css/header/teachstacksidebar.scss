@@ -1,0 +1,56 @@
+.techstack-sidebar {
+    position:fixed;
+    z-index:2;
+    background:#708975;
+    right:-94%;
+    width:94%;
+    height:100vh;
+    top:0;
+    font-size:4rem;
+    transition: 0.5s;
+	overflow: hidden;
+	
+    &.toggle {
+        transition: 0.5s;
+        right:0%;
+	}
+
+	.devicon{
+		position:relative;
+		opacity: 0;
+		transition: 0.7s;
+	}
+
+	&-show .devicon{
+		position:relative;
+		opacity: 1;
+		transition: 0.7s;
+		transition-delay: 0.5s;
+	}
+
+	&-card {
+		display:flex;
+		justify-content:space-between;
+		margin-bottom:1.5rem;
+	}
+}
+
+
+.three-icons {
+    width:72%;
+}
+.adobe {
+    font-size:85%;
+}
+.google {
+    font-size:80%;
+}
+.icon-javascript, .icon-typescript{
+    position: relative;
+    top:0.2rem;
+    font-size:3.8rem;
+}
+.icon-javascript {
+    position: relative;
+    top:0.2rem;
+}

@@ -71,9 +71,10 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	@import '../css/header/header.scss';
 	@import '../css/header/dothamburger.scss';
 	@import '../css/header/techstackmenu.scss';
+	@import '../css/header/teachstacksidebar.scss';
 	@import '../css/fontello.scss';
 </style>
