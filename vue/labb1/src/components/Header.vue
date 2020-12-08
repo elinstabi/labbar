@@ -14,7 +14,6 @@
 					<i class="icon icon-menu"></i>
 				</div>
 			</div>
-
 			<div class="techstack-sidebar-container">
 				<div class="techstack-sidebar-card">
 					<i class="icon icon-html5" title="html5"></i>
@@ -35,7 +34,6 @@
 					<i class="icon icon-vuejs"></i>
 					<i class="icon icon-nodejs"></i>
 					<i class="icon icon-npm"></i>
-
 				</div>
 
 				<div class="techstack-sidebar-card">

@@ -5,25 +5,26 @@
     transition-delay: 0.1s;
     transition:0.5s;
     padding:0.15rem 0 0 0.6rem;
-}
-.techstack-menu-dots.toggle i:first-child {
-    position: absolute;
-    transform:rotate(45deg);
-    /*top:0.6rem;*/
-    transition:0.5s;
-    transition-delay: 0.4s;
-}
-.techstack-menu-dots.toggle i:nth-child(2) {
-    position: absolute;
-    transform:rotate(45deg);
-    transition:0.5s;
-    transition-delay: 0.4s;
-}
-.techstack-menu-dots.toggle i:last-child {
-    position: absolute;
-    transform:rotate(-45deg);
-    /*top:-0.55rem;*/
-    transition:0.5s;
-    transition-delay: 0.4s;
-    right:-21px;
+    
+    &.toggle {
+        i:first-child {
+            position: absolute;
+            transform:rotate(45deg);
+            transition:0.5s;
+            transition-delay: 0.4s;
+        }
+        i:nth-child(2) {
+            position: absolute;
+            transform:rotate(45deg);
+            transition:0.5s;
+            transition-delay: 0.4s;
+        }
+        i:last-child {
+            position: absolute;
+            transform:rotate(-45deg);
+            transition:0.5s;
+            transition-delay: 0.4s;
+            right:-21px;
+        }
+    }
 }
