@@ -1,30 +1,42 @@
 .techstack-menu-dots {
-    display:flex;
-    flex-direction:column;
-    transform:rotate(0deg);
+    display: flex;
+    flex-direction: column;
+    transform:r otate(0deg);
     transition-delay: 0.1s;
-    transition:0.5s;
-    padding:0.15rem 0 0 0.6rem;
+    transition: 0.5s;
+    padding: 0.15rem 0 0 0.6rem;
     
     &.toggle {
+
         i:first-child {
             position: absolute;
-            transform:rotate(45deg);
-            transition:0.5s;
+            transform: rotate(45deg);
+            transition: 0.5s;
             transition-delay: 0.4s;
         }
+
         i:nth-child(2) {
             position: absolute;
-            transform:rotate(45deg);
-            transition:0.5s;
+            transform: rotate(45deg);
+            transition: 0.5s;
             transition-delay: 0.4s;
         }
+        
         i:last-child {
             position: absolute;
-            transform:rotate(-45deg);
-            transition:0.5s;
+            transform: rotate(-45deg);
+            transition: 0.5s;
             transition-delay: 0.4s;
-            right:-21px;
+            right: -21px;
         }
+    }
+}
+
+@media only screen and (min-width:920px) {
+    .techstack-meny-dots-x i:first-child {
+        top: 0.75rem;
+    }
+    .techstack-meny-dots-x i:last-child {
+        top: -0.7rem;
     }
 }

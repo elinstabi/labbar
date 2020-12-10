@@ -13,7 +13,7 @@ export default {
 		handleScroll () {
 			//Skulle man kunna koppla detta likt man kan koppla class till event
 			const imageAnimation = document.querySelector('.intro-img');
-			const sectionIntro = document.querySelector('.section-intro');
+			const sectionIntro = document.querySelector('.intro-section');
 			if (this.scrolled === window.scrollY > 0) {
 				imageAnimation.classList.remove('intro-img-toexperience');
 				sectionIntro.classList.remove('new-vh');

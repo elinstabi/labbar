@@ -21,7 +21,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   @import './css/global.scss';
-  @import './css/lefttoseparate.scss';
+  @import './css/font.scss';
+  @import './css/main.scss';
+  @import './css/intro.scss';
 </style>

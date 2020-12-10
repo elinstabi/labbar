@@ -1,15 +1,21 @@
 .header {
-    position:fixed;
-    z-index:1;
-    display:flex;
-    justify-content:space-between;
-    top:0;
-    background:#607665;
-    font-weight:400;
-    width:100%;
-    padding:2% 6%;
-    box-sizing:border-box;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    background: #607665;
+    font-weight: 400;
+    width: 100%;
+    padding: 2% 6%;
+    box-sizing: border-box;
 }
 .logo {
-    font-size:6rem;
+    font-size: 6rem;
+}
+
+@media only screen and (min-width:920px) {
+    .header {
+        padding: 3rem 6rem 0.5rem;
+    }
 }

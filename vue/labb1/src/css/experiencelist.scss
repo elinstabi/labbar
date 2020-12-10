@@ -1,0 +1,27 @@
+.ul-custom-dot {
+	list-style: none;
+    padding: 1rem 0rem;
+	font-size: 1.4rem;
+
+	li {
+		position: relative;
+		padding: 0 0 1.4rem 2rem; 
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			content: "";
+			width: 0.8rem;
+			height: 0.8rem;
+			background-color: #fff;
+			border-radius: 50%;
+			left: -0.14rem;
+			top: 0.5rem;
+		}
+	}
+	
+	.p {
+		font-size: 1.2rem;
+		line-height: 2;
+	}
+}

@@ -1,5 +1,5 @@
 <template>
-	<section class="section-intro">
+	<section class="intro-section">
 		<h1 class="h1">Hi, I’m Elin. I’m a passionate coder, digital designer & strategist.</h1>
 	</section>
 </template>

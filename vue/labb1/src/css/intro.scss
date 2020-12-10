@@ -1,0 +1,82 @@
+.intro {
+	&-section {
+		position: relative;
+		padding-top: 55%;
+		width: 90%;
+		height: 28rem;
+		transition: 0.5s;
+
+		&.new-vh {
+			height: auto; 
+			height: 10rem;
+			transition: 0.5s;
+		}
+	}
+
+	&-img {
+		position: relative;
+		width: 100%;
+		top: 0%;
+		left: 0%;
+		margin-bottom: 2.6rem;
+		transition: 0.5s;
+
+		&-toexperience {
+			position: relative;
+			width: 100%;
+			object-fit: cover;
+			top: 5%;
+			left: 0%;
+			transition: 0.5s;
+		}
+	}
+}
+
+@media only screen and (min-width:500px){
+    .intro-section {
+        padding-top: 37%;
+        width: 75%;
+		height: 50vh;
+		
+		&.new-vh {
+			height: 9rem;
+		}
+    }
+}
+
+@media only screen and (min-width:720px) and (max-width:920px){
+    .intro-section {
+		height:	45vh;
+
+		&.new-vh {
+			height:	8rem;
+		}
+    }
+}
+
+@media only screen and (min-width:920px) {
+	.intro {
+		&-section {
+			padding-top: 25%;
+			width: 50%;
+			height: 45vh;
+			
+			&.new-vh {
+				height: 35vh; 
+			}
+		}
+
+		&-img {
+			margin-bottom: 0;
+			
+			&-toexperience {
+				position: relative;
+				transition: 0.5s;
+				height: 14rem;
+				top: 110%;
+				left: 53%;
+				width: 28%;
+			}
+		}
+    }
+}

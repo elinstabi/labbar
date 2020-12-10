@@ -1,0 +1,12 @@
+.main {
+    padding: 0 6%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media only screen and (min-width:920px) {
+    .main {
+        margin-bottom: -11.5rem;
+        padding: 0 6rem;
+    }
+}

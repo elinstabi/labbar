@@ -1,34 +1,51 @@
 .techstack-menu {
-    display:flex;
-    z-index:3;
-    position:relative;
-    right:0%;
-    transition:0.5s;
+    display: flex;
+    z-index: 3;
+    position: relative;
+    right: 0%;
+    transition: 0.5s;
     font-size: 1.6rem;
-    cursor:pointer;
-    top:0.4rem;
+    cursor: pointer;
+    top: 0.4rem;
     
     &.toggle {
-        right:-100%;
-        transition:0.5s;
+        right: -100%;
+        transition: 0.5s;
     }
-
+    
     i {
         line-height: 0.3;
-        top:0.8rem;
+        top: 0.8rem;
     }
 
     &-sidebar {
-        position:absolute;
-        right:-100%;
-        transition:0.5s;
+        position: absolute;
+        right: -100%;
+        transition: 0.5s;
         top: 7%;
         font-weight: 400;
 
         &.toggle {
-            right:20%;
-            transition:0.6s;
+            right: 20%;
+            transition: 0.6s;
+        }
+    }  
+}
+
+@media only screen and (min-width:920px) {
+    .techstack-meny {
+        font-size: 2rem;
+
+        &-open {
+            right: 15%;
+        }
+
+        &-sidebar {
+            top: 3.4rem;
         }
     }
-    
+}
+
+.techstack-meny .icon-menu:before {
+    line-height: 0.3;
 }
